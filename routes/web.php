@@ -21,11 +21,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware(['auth'])->group(function () {//checkactive
+Route::middleware(['auth'])->group(function () {
 	Route::get('/user/verify', [HomeController::class, 'userVerify'])->name('user.verify');
 });
 
-Route::middleware(['auth'])->group(function () {//checkactive
+Route::middleware(['auth', 'checkactive'])->group(function () {//
 	Route::get('/home', [HomeController::class, 'index'])->name('home');
 	Route::resource('facturas', InvoiceController::class)->names('invoce');
 });
