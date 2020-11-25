@@ -33,4 +33,12 @@ class InvoiceController extends Controller
 
 		return redirect()->route('home')->with('status', 'Factura creada con exito');
     }
+
+    public function show(Invoice $invoice){
+
+    	$invoices = Invoice::where('fiscal_id', Auth::user()->fiscal_id)->paginate(10);
+
+    	return view('invoices.show', compact('invoices'));
+
+    }
 }

@@ -23,6 +23,8 @@
                           <th scope="col">Fecha</th>
                           <th scope="col">Usuario</th>
                           <th scope="col">Valor</th>
+                          <th scope="col">Moneda</th>
+                          <th scope="col">Pais</th>
                           <th scope="col">Estado</th>
                         </tr>
                       </thead>
@@ -33,6 +35,8 @@
                           <td>{{ $invoice->created_at }}</td>
                           <td>{{ $invoice->name }}</td>
                           <td>{{ $invoice->value }}</td>
+                          <td>{{ $invoice->currency }}</td>
+                          <td>{{ $invoice->country }}</td>
                           <td>{{ $invoice->state }}</td>
                         </tr>
                         @endforeach
