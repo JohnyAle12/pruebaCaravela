@@ -23,15 +23,17 @@
                           <th scope="col">Fecha</th>
                           <th scope="col">Usuario</th>
                           <th scope="col">Valor</th>
+                          <th scope="col">Estado</th>
                         </tr>
                       </thead>
                       <tbody>
                         @foreach($invoices as $invoice)
                         <tr>
                           <td>{{ $invoice->id }}</td>
-                          <td>--</td>
-                          <td>{{ $invoice->id }}</td>
+                          <td>{{ $invoice->created_at }}</td>
+                          <td>{{ $invoice->name }}</td>
                           <td>{{ $invoice->value }}</td>
+                          <td>{{ $invoice->state }}</td>
                         </tr>
                         @endforeach
                       </tbody>
