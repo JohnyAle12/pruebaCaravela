@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Invoice extends Model
 {
     use HasFactory;
+
+    public function users(){
+    	return $this->belongsTo('App\Models\User');
+    }
 }

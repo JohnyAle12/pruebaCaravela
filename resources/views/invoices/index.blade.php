@@ -16,6 +16,26 @@
                     @include('layouts.nav')
 
 
+                    <table class="table mt-3">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Usuario</th>
+                          <th scope="col">Valor</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach($invoices as $invoice)
+                        <tr>
+                          <td>{{ $invoice->id }}</td>
+                          <td>--</td>
+                          <td>{{ $invoice->id }}</td>
+                          <td>{{ $invoice->value }}</td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                    </table>
 
                 </div>
             </div>
